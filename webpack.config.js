@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  watch: true,
+  watch: false,
   entry: './resources/assets/scripts/index.js',
   output: {
     filename: 'main.js',
