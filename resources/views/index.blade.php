@@ -1,19 +1,17 @@
-
 @extends('layouts.app')
 
 @section('content')
   @include('partials.page-header')
+  <h2>Web Components</h2>
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-    {!! get_search_form(true) !!}
-  @endif
-
-  @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
-  @endwhile
+  <todo-list title="My Todo"></todo-list>
+  <number-counter></number-counter>
+  <number-counter></number-counter>
+  <number-counter></number-counter>
+  <number-counter></number-counter>
+  <number-counter></number-counter>
+  <number-counter></number-counter>
+  <number-counter></number-counter>
 
   {!! get_the_posts_navigation() !!}
 @endsection
